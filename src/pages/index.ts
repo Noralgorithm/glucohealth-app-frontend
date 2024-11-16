@@ -1,0 +1,8 @@
+export { LoginPage } from './login/page'
+export { DashboardPage } from './dashboard/page'
+export { PatientPage } from './patient/page'
+export { PatientCreateMedicationPage } from './patient/create-medication/page'
+export { PatientsPage } from './patients/page'
+export { PatientPreregisterPage } from './patients/preregister/page'
+export { PatientPreregisterLoginDataPage } from './patients/preregister/login-data/page'
+export { SettingsPage } from './settings/page'
