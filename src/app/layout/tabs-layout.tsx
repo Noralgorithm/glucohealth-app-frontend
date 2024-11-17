@@ -19,9 +19,19 @@ const getBackgroundColorByRoute = (path: string) => {
     case ROUTES.APP.DASHBOARD.PATH:
       return '#7DD3FC'; // Celeste pastel
     case ROUTES.APP.PATIENTS.PATH:
-      return '#9370DB'; // Púrpura pastel
-    default:
+      return '#FEF08A'; // Amarillo pastel
+    case ROUTES.APP.PATIENTS.PREREGISTER.PATH:
+      return '#FEF08A'; // Amarillo pastel
+    case ROUTES.APP.PATIENT.PATH:
+      return '#FEF08A'; // Amarillo pastel
+    case ROUTES.APP.PATIENT.FULLFILMENT.PATH:
+      return '#FEF08A'; // Amarillo pastel
+    case ROUTES.APP.PATIENT.CREATE_MEDICATION.PATH:
+      return '#FEF08A'; // Amarillo pastel     
+    case ROUTES.APP.SETTINGS.PATH:
       return '#98FB98'; // Verde pastel
+    default:
+      return '#7DD3FC'; // Celeste pastel
   }
 };
 
@@ -30,9 +40,19 @@ const getIconColorByRoute = (path: string) => {
     case ROUTES.APP.DASHBOARD.PATH:
       return '#0369A1'; // Azul oscuro
     case ROUTES.APP.PATIENTS.PATH:
-      return '#8B4513'; // Marrón oscuro
-    default:
+      return '#CA8A04'; // Amarillo oscuro
+    case ROUTES.APP.PATIENTS.PREREGISTER.PATH:
+      return '#CA8A04'; // Amarillo oscuro  
+    case ROUTES.APP.PATIENT.PATH:
+      return '#CA8A04'; // Amarillo oscuro
+    case ROUTES.APP.PATIENT.FULLFILMENT.PATH:
+      return '#CA8A04'; // Amarillo oscuro
+    case ROUTES.APP.PATIENT.CREATE_MEDICATION.PATH:
+      return '#CA8A04'; // Amarillo oscuro     
+    case ROUTES.APP.SETTINGS.PATH:
       return '#006400'; // Verde oscuro
+    default:
+      return '#0369A1'; // Azul oscuro
   }
 };
 

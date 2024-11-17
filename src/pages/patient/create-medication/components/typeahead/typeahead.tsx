@@ -94,29 +94,29 @@ function Typeahead(props: TypeaheadProps) {
 
   return (
     <>
-      <IonHeader>
-        <IonToolbar>
+      <IonHeader className="text-black bg-yellow-200">
+        <IonToolbar color={'bg-yellow-200'}>
           <IonButtons slot="start">
             <IonButton onClick={cancelChanges}>Cancel</IonButton>
           </IonButtons>
           <IonTitle>{props.title}</IonTitle>
           <IonButtons slot="end">
-            <IonButton onClick={confirmChanges}>Done</IonButton>
+            <IonButton onClick={confirmChanges}>Corfirm</IonButton>
           </IonButtons>
         </IonToolbar>
-        <IonToolbar>
-          <IonSearchbar onIonInput={searchbarInput}></IonSearchbar>
+        <IonToolbar color={'bg-yellow-200'}>
+          <IonSearchbar onIonInput={searchbarInput} className="text-black bg-yellow-200"></IonSearchbar>
         </IonToolbar>
       </IonHeader>
 
       <IonContent color="light" class="ion-padding">
-        <IonList id="modal-list" inset={true}>
+        <IonList id="modal-list" inset={true} className="text-black bg-yellow-200">
           {filteredItems.map(item => (
-            <IonItem key={item.value}>
+            <IonItem key={item.value} className="text-black bg-yellow-200">
               <IonCheckbox
                 value={item.value}
                 checked={isChecked(item.value)}
-                onIonChange={checkboxChange}
+                onIonChange={checkboxChange}                
               >
                 {item.text}
               </IonCheckbox>

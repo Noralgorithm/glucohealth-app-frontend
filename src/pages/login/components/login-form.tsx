@@ -65,7 +65,7 @@ export function LoginForm() {
         label="Correo Electrónico"
         type="email"
         errorText={errors.email || 'placeholder'}
-        className={`max-w-xl ${errors.email ? 'ion-invalid' : ''} ${touched.email && 'ion-touched'}`}
+        className={`max-w-xl rounded-md bg-gray-200 ${errors.email ? 'ion-invalid' : ''} ${touched.email && 'ion-touched'}`}
         mode="md"
       />
       <IonInput
@@ -74,12 +74,12 @@ export function LoginForm() {
         label="Contraseña"
         type="password"
         errorText={errors.password || 'placeholder'}
-        className={`max-w-xl ${errors.password ? 'ion-invalid' : ''} ${touched.password && 'ion-touched'}`}
+        className={`max-w-xl rounded-md bg-gray-200 ${errors.password ? 'ion-invalid' : ''} ${touched.password && 'ion-touched'}`}
         mode="md"
       >
         <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
       </IonInput>
-      <IonButton type="submit" color="primary">
+      <IonButton type="submit" className='bg-sky-500 rounded-md' color={'black'}>
         Iniciar Sesión
       </IonButton>
     </form>

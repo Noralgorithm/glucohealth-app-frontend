@@ -31,23 +31,25 @@ export function PatientCreateMedicationPage() {
   })
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
+    <IonPage className="bg-yellow-100">
+      <IonHeader className="text-black bg-yellow-200">
+        <IonToolbar color={'bg-yellow-200'}>
           <IonTitle>Crear medicación</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <main className="flex flex-col gap-5 px-5 pt-12 max-w-2xl mx-auto">
-          {!isSuccess ? (
-            <div className="w-full h-full flex justify-center items-center">
-              <IonSpinner />
-            </div>
-          ) : (
-            <CreateMedicationForm treatment={data} />
-          )}
-        </main>
-      </IonContent>
+      <div className="w-full h-full flex flex-col px-4 max-w-xl m-auto bg-yellow-100">
+        <IonContent fullscreen className='bg-yellow-100'>
+          <main className="flex h-full flex-col gap-5 px-5 pt-12 max-w-2xl mx-auto bg-yellow-100">
+            {!isSuccess ? (
+              <div className="w-full h-full flex justify-center items-center">
+                <IonSpinner />
+              </div>
+            ) : (
+              <CreateMedicationForm treatment={data} />
+            )}
+          </main>
+        </IonContent>
+      </div>
     </IonPage>
   )
 }

@@ -135,7 +135,7 @@ export function CreateMedicationForm({ treatment }: { treatment: Treatment }) {
         </div>
         {data !== undefined ? (
           <>
-            <IonButton className="w-full h-[50px]" id="select-medicament">
+            <IonButton className="w-full h-[50px] bg-yellow-500 rounded-md" id="select-medicament"  color={'bg-yellow-500'}>
               Seleccionar medicamento
             </IonButton>
             <IonModal
@@ -158,7 +158,7 @@ export function CreateMedicationForm({ treatment }: { treatment: Treatment }) {
           </>
         ) : (
           <>
-            <IonButton className="w-full opacity-60 h-[50px]">
+            <IonButton className="w-full opacity-60 h-[50px] bg-yellow-500 rounded-md" color={'bg-yellow-500'}>
               <IonSpinner slot="" />
             </IonButton>
           </>
@@ -247,7 +247,8 @@ export function CreateMedicationForm({ treatment }: { treatment: Treatment }) {
       <footer className="w-full flex justify-end">
         <IonButton
           type="submit"
-          className={`w-[40%] ${isValid ? 'opacity-100' : 'opacity-60'}`}
+          className={`w-[40%] bg-yellow-500 rounded-md ${isValid ? 'opacity-100' : 'opacity-60'}`}
+          color={'bg-yellow-500'}
         >
           Guardar
         </IonButton>
