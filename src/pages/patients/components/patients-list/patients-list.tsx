@@ -52,7 +52,7 @@ export function PatientsList({ nationalId }: Props) {
 
   return (
     <>
-      <IonList className="max-w-xl gap-5 w-full">
+      <IonList className="max-w-xl gap-5 w-full bg-yellow-100">
         {data?.pages?.every(p => p.itemCount === 0) && (
           <h4 className="ml-4 opacity-80">No se han encontrado pacientes.</h4>
         )}

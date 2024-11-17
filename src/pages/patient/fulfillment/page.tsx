@@ -46,16 +46,16 @@ export function PatientFullfilmentPage() {
   })
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
+    <IonPage className="bg-yellow-100">
+      <IonHeader className="text-black bg-yellow-200">
+        <IonToolbar color={'bg-yellow-200'}>
           <IonTitle>Tratamiento</IonTitle>
         </IonToolbar>
       </IonHeader>
 
-      <IonContent fullscreen>
+      <IonContent fullscreen className="bg-yellow-100">
         <div
-          className={`flex justify-center ${isDarkMode ? 'bg-bg-datetime-customized-color-dark' : 'bg-bg-datetime-customized-color-light'}`}
+          className="flex justify-center bg-yellow-100"
         >
           <IonDatetime
             locale="es"
@@ -64,13 +64,14 @@ export function PatientFullfilmentPage() {
             presentation="date"
             onIonChange={e => setDate(new Date(e.detail.value as string))}
             max={new Date().toISOString()}
+            className="bg-yellow-200 rounded-md mt-4"
           ></IonDatetime>
         </div>
 
-        <IonText className="">
+        <IonText className="flex justify-center bg-yellow-100">
           <h1 className="ml-2 text-xl font-bold">Medicaciones</h1>
         </IonText>
-        <div>
+        <div className="w-full h-full px-4 m-auto flex justify-center bg-yellow-100">
           {(dateTreatment?.length === 0 ||
             dateTreatment?.every(dt => dt.schedule.length === 0)) && (
             <h4 className="pl-3 italic opacity-50">

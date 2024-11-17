@@ -60,7 +60,7 @@ export function PreregisterForm() {
         labelPlacement="stacked"
         type="email"
         errorText={errors.email}
-        className={`max-w-xl ${errors.email ? 'ion-invalid' : ''} ${touched.email && 'ion-touched'}`}
+        className={`max-w-xl border-2 rounded-md bg-gray-100 border-gray-200 ${errors.email ? 'ion-invalid' : ''} ${touched.email && 'ion-touched'}`}
         label="Correo Electrónico"
         mode="md"
       />
@@ -70,11 +70,11 @@ export function PreregisterForm() {
         labelPlacement="stacked"
         label="Cédula de identidad"
         errorText={errors.nationalId}
-        className={`max-w-xl ${errors.nationalId ? 'ion-invalid' : ''} ${touched.nationalId && 'ion-touched'}`}
-        mode="md"
+        className={`max-w-xl border-2 rounded-md bg-gray-100 border-gray-200  ${errors.nationalId ? 'ion-invalid' : ''} ${touched.nationalId && 'ion-touched'}`}
+        mode="md"        
       ></IonInput>
 
-      <IonButton disabled={!isValid} type="submit">
+      <IonButton disabled={!isValid} className="bg-yellow-500 rounded-md" color={'bg-yellow-500'} type="submit">
         Continuar
       </IonButton>
     </form>

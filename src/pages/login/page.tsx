@@ -7,26 +7,18 @@ export function LoginPage() {
   let isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches
 
   return (
-    <IonPage>
-      <IonContent fullscreen>
-        <main className="w-full h-full flex justify-center items-center flex-col gap-5 px-5">
-          <IonText className="text-center flex flex-col items-center">
-            {isDarkMode ? (
-              <img
-                src={darkLogo}
-                alt="GlucoHealth"
-                className="w-[90%] max-w-xl"
-              />
-            ) : (
-              <img src={logo} alt="GlucoHealth" className="w-[90%] max-w-xl" />
-            )}
-
-            <h2>Bienvenido, enfermero/a</h2>
-          </IonText>
-
-          <LoginForm />
-        </main>
-      </IonContent>
+    <IonPage className='bg-sky-200'>
+      <div className="w-full h-full flex flex-col px-4 max-w-xl m-auto bg-sky-200">
+        <IonContent fullscreen className='bg-sky-200'>
+          <main className="w-full h-full flex justify-center items-center flex-col gap-5 px-5 bg-sky-200">
+            <IonText className="text-center flex flex-col items-center">
+              <img src={logo} alt="GlucoHealth" className="w-[90%] max-w-xl" />  
+              <h2>Bienvenido, enfermero/a</h2>
+            </IonText>
+            <LoginForm />
+          </main>
+        </IonContent>
+      </div>
     </IonPage>
   )
 }

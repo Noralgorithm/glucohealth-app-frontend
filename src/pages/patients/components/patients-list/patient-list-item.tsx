@@ -16,7 +16,7 @@ interface Props {
 
 export function PatientListItem({ patient }: Props) {
   return (
-    <IonCard className="flex flex-row px-5 pt-3" mode="ios">
+    <IonCard className="flex flex-row px-5 pt-3 bg-yellow-200" mode="ios">
       <IonAvatar className="w-14 h-14 mr-5">
         <img alt="" src={avatar_svg} />
       </IonAvatar>

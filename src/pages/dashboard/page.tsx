@@ -31,7 +31,7 @@ export function DashboardPage() {
               <img src={patientsImg}></img>
               <IonCardHeader>
                 <IonCardTitle className='text-black font-bold'>Pacientes</IonCardTitle>
-                <IonIcon icon={person} name='hearth' slot="end" />
+                <IonIcon icon={person} slot="end" />
               </IonCardHeader>
               <IonCardContent className="-mt-2">
                 Ver la lista de pacientes, buscar a un paciente por su
