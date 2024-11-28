@@ -22,6 +22,8 @@ const getBackgroundColorByRoute = (path: string) => {
       return '#FEF08A'; // Amarillo pastel
     case ROUTES.APP.PATIENTS.PREREGISTER.PATH:
       return '#FEF08A'; // Amarillo pastel
+    case ROUTES.APP.PATIENTS.PREREGISTER.LOGIN_DATA.PATH:
+      return '#FEF08A'; // Amarillo pastel
     case ROUTES.APP.PATIENT.PATH:
       return '#FEF08A'; // Amarillo pastel
     case ROUTES.APP.PATIENT.FULLFILMENT.PATH:
@@ -43,6 +45,8 @@ const getIconColorByRoute = (path: string) => {
       return '#CA8A04'; // Amarillo oscuro
     case ROUTES.APP.PATIENTS.PREREGISTER.PATH:
       return '#CA8A04'; // Amarillo oscuro  
+    case ROUTES.APP.PATIENTS.PREREGISTER.LOGIN_DATA.PATH:
+      return '#CA8A04'; // Amarillo oscuro
     case ROUTES.APP.PATIENT.PATH:
       return '#CA8A04'; // Amarillo oscuro
     case ROUTES.APP.PATIENT.FULLFILMENT.PATH:
