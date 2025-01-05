@@ -2,8 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 
 export function useMedicamentById(id: string) {
   const { data, error, isLoading } = useQuery(
-    ['medicament', id], // Este es el queryKey, que es único para cada medicament
-    () => fetchMedicamentById(id) // queryFn: función que obtiene los datos del medicament
+    ['medicament', id],  // El queryKey que es único para cada medicament
+    () => fetchMedicamentById(id)  // queryFn: función que obtiene los datos del medicament
   )
 
   return { data, error, isLoading }
