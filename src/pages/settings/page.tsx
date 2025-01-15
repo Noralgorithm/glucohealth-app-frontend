@@ -13,6 +13,7 @@ import { callOutline, mailOutline } from 'ionicons/icons'
 import { useHistory } from 'react-router'
 import { logout } from '~/features/auth/model/auth'
 import { useStore } from '~/shared/store/store'
+import logo from '~/shared/assets/logo.png'
 
 export function SettingsPage() {
   const history = useHistory()
@@ -28,7 +29,14 @@ export function SettingsPage() {
     <IonPage className="bg-green-200">
       <IonHeader className='text-black bg-green-300'>
         <IonToolbar color={'bg-green-200'}>
-          <IonTitle>Perfil</IonTitle>
+          <div className="flex items-center w-full">
+            <IonTitle className="flex-grow">Perfil</IonTitle>
+              <img
+                src={logo}
+                alt="GlucoHealth"
+                className="h-16 m-4"
+              />
+          </div>
         </IonToolbar>
       </IonHeader>      
       <IonContent fullscreen className='bg-green-200'>

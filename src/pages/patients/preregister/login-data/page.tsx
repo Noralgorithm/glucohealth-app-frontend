@@ -15,6 +15,7 @@ import { key, mail } from 'ionicons/icons'
 import { useParams, useLocation } from 'react-router'
 import { decrypt } from '~/shared/utils/aes-encryption'
 import { ROUTES } from '~/shared/constants/routes'
+import logo from '~/shared/assets/logo.png'
 
 export function PatientPreregisterLoginDataPage() {
   const { search } = useLocation()
@@ -36,7 +37,14 @@ export function PatientPreregisterLoginDataPage() {
     <IonPage className="bg-yellow-100">
       <IonHeader className="text-black bg-yellow-200">
         <IonToolbar color={'bg-yellow-200'}>
-          <IonTitle>Registro previo</IonTitle>
+          <div className="flex items-center w-full">
+            <IonTitle className="flex-grow">Registro previo</IonTitle>
+              <img
+                src={logo}
+                alt="GlucoHealth"
+                className="h-16 m-4"
+              />
+          </div>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className='bg-yellow-100'>

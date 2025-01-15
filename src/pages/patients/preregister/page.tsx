@@ -7,13 +7,21 @@ import {
 } from '@ionic/react'
 import { PreregisterForm } from './components/preregister-form'
 import { PageHeader } from './components/page-header'
+import logo from '~/shared/assets/logo.png'
 
 export function PatientPreregisterPage() {
   return (
     <IonPage className="bg-yellow-100">
       <IonHeader className="text-black bg-yellow-200">
         <IonToolbar color={'bg-yellow-200'}>
-          <IonTitle>Registro previo</IonTitle>
+          <div className="flex items-center w-full">
+            <IonTitle className="flex-grow">Registro previo</IonTitle>
+              <img
+                src={logo}
+                alt="GlucoHealth"
+                className="h-16 m-4"
+              />
+          </div>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className='bg-yellow-100'>

@@ -11,6 +11,7 @@ import { useLocation } from 'react-router'
 import { useQuery } from '@tanstack/react-query'
 import { getTreatmentById } from '~/features/treatments/services/get-by-id'
 import { QUERY_KEYS } from '~/features/treatments/constants'
+import logo from '~/shared/assets/logo.png'
 
 export function PatientCreateMedicationPage() {
   const { search } = useLocation()
@@ -34,7 +35,14 @@ export function PatientCreateMedicationPage() {
     <IonPage className="bg-yellow-100">
       <IonHeader className="text-black bg-yellow-200">
         <IonToolbar color={'bg-yellow-200'}>
-          <IonTitle>Crear medicación</IonTitle>
+          <div className="flex items-center w-full">
+            <IonTitle className="flex-grow">Crear medicación</IonTitle>
+              <img
+                src={logo}
+                alt="GlucoHealth"
+                className="h-16 m-4"
+              />
+          </div>
         </IonToolbar>
       </IonHeader>
       <div className="w-full h-full flex flex-col px-4 max-w-xl m-auto bg-yellow-100">

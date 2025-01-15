@@ -19,6 +19,7 @@ import { getPatientById } from '~/features/patients/services/get-by-id'
 import { TreatmentMedicamentsList } from './components/treatment-list/treatment-list'
 import { add } from 'ionicons/icons'
 import { ROUTES } from '~/shared/constants/routes'
+import logo from '~/shared/assets/logo.png'
 
 export function PatientPage() {
   const [present, dismiss] = useIonLoading()
@@ -59,7 +60,14 @@ export function PatientPage() {
       <IonPage className="bg-yellow-100">
         <IonHeader className="text-black bg-yellow-200">
           <IonToolbar color={'bg-sky-300'}>
-            <IonTitle>Paciente</IonTitle>
+            <div className="flex items-center w-full">
+              <IonTitle className="flex-grow">Paciente</IonTitle>
+                <img
+                  src={logo}
+                  alt="GlucoHealth"
+                  className="h-16 m-4"
+                />
+            </div>
           </IonToolbar>
         </IonHeader>
         <div className="w-full h-full flex flex-col px-4 max-w-xl m-auto bg-yellow-100">

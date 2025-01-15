@@ -14,6 +14,8 @@ import { add } from 'ionicons/icons'
 import { ROUTES } from '~/shared/constants/routes'
 import { PatientsList } from './components/patients-list/patients-list'
 import { useState } from 'react'
+import logo from '~/shared/assets/logo.png'
+
 
 export function PatientsPage() {
   let isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches
@@ -24,7 +26,14 @@ export function PatientsPage() {
     <IonPage className="bg-yellow-100">
       <IonHeader className="text-black bg-yellow-200">
         <IonToolbar color={'bg-yellow-200'}>
-          <IonTitle>Pacientes</IonTitle>
+          <div className="flex items-center w-full">
+            <IonTitle className="flex-grow">Pacientes</IonTitle>
+              <img
+                src={logo}
+                alt="GlucoHealth"
+                className="h-16 m-4"
+              />
+          </div>
         </IonToolbar>
       </IonHeader>
       <div className="w-full h-full flex flex-col px-4 max-w-xl m-auto bg-yellow-100">
