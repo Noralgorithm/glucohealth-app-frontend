@@ -15,13 +15,21 @@ import {
 import { person } from 'ionicons/icons'
 import { ROUTES } from '~/shared/constants/routes'
 import patientsImg from '~/shared/assets/patients-image.avif'
+import logo from '~/shared/assets/logo.png'
 
 export function DashboardPage() {
   return (
     <IonPage className='bg-sky-200'>
       <IonHeader className='text-black bg-sky-300'>
         <IonToolbar color={'bg-sky-300'}>          
-          <IonTitle>Panel</IonTitle>                 
+          <div className="flex items-center w-full">
+            <IonTitle className="flex-grow">Panel</IonTitle>
+              <img
+                src={logo}
+                alt="GlucoHealth"
+                className="h-16 m-4"
+              />
+          </div>
         </IonToolbar>
       </IonHeader>
       <div className="w-full h-full flex flex-col px-4 max-w-xl m-auto bg-sky-200">

@@ -14,6 +14,8 @@ import { useLocation } from 'react-router'
 import { getPatientTreatmentByDate } from '~/features/treatments/services/get-by-id-and-date'
 import { MedicationCard } from '~/shared/components/medication-card'
 import { toIsoString } from '~/shared/utils/construct-date-string'
+import logo from '~/shared/assets/logo.png'
+
 
 export function PatientFullfilmentPage() {
   let isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches
@@ -49,7 +51,14 @@ export function PatientFullfilmentPage() {
     <IonPage className="bg-yellow-100">
       <IonHeader className="text-black bg-yellow-200">
         <IonToolbar color={'bg-yellow-200'}>
-          <IonTitle>Tratamiento</IonTitle>
+          <div className="flex items-center w-full">
+            <IonTitle className="flex-grow">Tratamiento</IonTitle>
+              <img
+                src={logo}
+                alt="GlucoHealth"
+                className="h-16 m-4"
+              />
+          </div>
         </IonToolbar>
       </IonHeader>
 
